@@ -60,4 +60,23 @@ func main() {
 		fmt.Println(val)
 	}
 	fmt.Println(result.Count)
+
+	a, err := data.User().Update(&repo.User{
+		ID: 2,
+		FirstName:   "New data",
+        LastName:    "New lastname",
+        Email:       "new email@gmail.com",
+        PhoneNumber: "+new phone number",
+	})
+	if err!= nil {
+        panic(err)
+    }
+	fmt.Println(a)
+
+
+	err = data.User().Delete(2)
+	if err!= nil {
+        panic(err)
+    }
+	fmt.Println("User deleted")
 }
