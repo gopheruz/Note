@@ -9,10 +9,12 @@ import (
 
 type StorageI interface{
 	User() repo.UserStorageI
+	Notes() repo.NoteStorageI
 }
 
 type StoragePg struct{
 	userRepo repo.UserStorageI
+	noteRepo repo.NoteStorageI
 }
 
 func New(db *sqlx.DB) StorageI{
@@ -23,4 +25,7 @@ func New(db *sqlx.DB) StorageI{
 
 func (s *StoragePg)User()repo.UserStorageI{
 	return s.userRepo
+}
+func(s *StoragePg)Notes()repo.NoteStorageI{
+	return s.noteRepo
 }
