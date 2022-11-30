@@ -4,16 +4,16 @@ import "time"
 
 type Note struct {
 	ID          int64
-	PostId      int64
+	UserId      int64
 	Title       string
 	Description string
 	CreatedAt   time.Time
-	UpdatedAt   time.Time
+	UpdatedAt   *time.Time
 	DeletedAt   *time.Time
 }
 
 type NoteStorageI interface {
-	Create(note *Note)( *Note, error)
+	Create(note Note) (*Note, error)
 	Get(id int64) (*Note, error)
 	GetAll(params *GetallNotesParams) (*GetAllNotesResponse, error)
 	Update(note *Note) (*Note, error)

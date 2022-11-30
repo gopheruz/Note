@@ -31,9 +31,6 @@ github.com/magiconair/properties
 # github.com/mitchellh/mapstructure v1.5.0
 ## explicit; go 1.14
 github.com/mitchellh/mapstructure
-# github.com/nurmuhammaddeveloper/Note v0.0.0-20221129080229-b1441f9837ef
-## explicit; go 1.19
-github.com/nurmuhammaddeveloper/Note/config
 # github.com/pelletier/go-toml v1.9.5
 ## explicit; go 1.12
 github.com/pelletier/go-toml

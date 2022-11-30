@@ -1,4 +1,4 @@
-module Note
+module github.com/nurmuhammaddeveloper/Note
 
 go 1.19
 
@@ -6,7 +6,6 @@ require (
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/joho/godotenv v1.4.0
 	github.com/lib/pq v1.10.7
-	github.com/nurmuhammaddeveloper/Note v0.0.0-20221129080229-b1441f9837ef
 	github.com/spf13/viper v1.14.0
 )
 

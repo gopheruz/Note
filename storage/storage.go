@@ -1,8 +1,10 @@
 package storage
 
 import (
-	"Note/storage/postgres"
-	"Note/storage/repo"
+
+
+	"github.com/nurmuhammaddeveloper/Note/storage/postgres"
+	"github.com/nurmuhammaddeveloper/Note/storage/repo"
 
 	"github.com/jmoiron/sqlx"
 )
@@ -20,6 +22,7 @@ type StoragePg struct{
 func New(db *sqlx.DB) StorageI{
 	return &StoragePg{
 		userRepo: postgres.NewUserStorage(db),
+		noteRepo: postgres.NewNoteRepo(db),
 	}
 }
 

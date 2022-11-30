@@ -1,7 +1,7 @@
 package postgres
 
 import (
-	"Note/storage/repo"
+	"github.com/nurmuhammaddeveloper/Note/storage/repo"
 	"fmt"
 	"time"
 
@@ -107,7 +107,7 @@ func (ur *userRepo) GetAll(params *repo.GetallUsersParams) (*repo.GetallUsersRes
 		return nil, err
 	}
 	defer rows.Close()
-	for rows.Next() {
+	for rows.Next() {		
 		var result repo.User
 		err = rows.Scan(
 			&result.ID,
