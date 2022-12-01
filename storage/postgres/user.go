@@ -50,6 +50,7 @@ func (ur *userRepo) Get(id int64) (*repo.User, error) {
 	var result repo.User
 	query := `
 		SELECT 
+			id,
 			first_name,
 			last_name,
 			phone_number,
@@ -61,6 +62,7 @@ func (ur *userRepo) Get(id int64) (*repo.User, error) {
 	`
 	rows := ur.db.QueryRow(query, id)
 	err := rows.Scan(
+		&result.ID,
 		&result.FirstName,
 		&result.LastName,
 		&result.PhoneNumber,
